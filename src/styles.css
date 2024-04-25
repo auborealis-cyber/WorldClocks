@@ -1,11 +1,18 @@
-body{
-background-color: rgb(142, 239, 226);
+body {
+  background-color: rgb(142, 239, 226);
 }
-h1{
-    text-align: center;
-    text-decoration: underline;
+h1 {
+  text-align: center;
+  text-decoration: underline;
 }
-footer{
-    text-align: center;
-    color:grey;
+.container {
+  display: block;
+  text-align: center;
+}
+.city-details {
+  text-align: center;
+}
+footer {
+  text-align: center;
+  color: grey;
 }
