@@ -1,4 +1,4 @@
-alert("Hello!");
+alert("Welcome!");
 function updateTime() {
   
   let losAngelesElement = document.querySelector("#los-angeles");
@@ -25,11 +25,13 @@ function updateTime() {
     );
   }
 }
-
 function updateCity(event) {
     let cityTimeZone = event.target.value;
     if (cityTimeZone === "current") {
         cityTimeZone = moment.tz.guess();
+    }
+    if (cityTimeZone === "NA") {
+        alert("Please select a city");
     }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
@@ -44,11 +46,11 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
+  <a href="index.html">Back to home screen</a>
   `;
 }
 
 updateTime();
 setInterval(updateTime, 1000);
-
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
